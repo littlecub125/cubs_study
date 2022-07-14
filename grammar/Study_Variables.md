@@ -64,4 +64,66 @@ example
         increment_print();      // output: 4
         return 0;    
     }
+if use static variables in private member of "Class"
+- should use public function to access private static variables
+
+- "this->" can cause error in public member function, since static member variable may haven't create object
+
+
+
+### Remember!
+- declare and define static variable in global area
+- In "Class", only declarion is available
+- In header file, definintion and initialization are impossible
+
+## Const
+- declare constant variable >> can not change initial value
+
+example
+
+    // constant parameter
+    void function(const int)
+
+    //constant return
+    const double func(int)
+
+    //constant function and do not change parameter
+    void func(void) const
+
+## Define
+- similar to const
+
+- difference
+    - define
+        - simply replace at pre-processing stage 
+    - const
+        - allocate memory like ordinary variables
+        - prevent changing memory
+
+### !! Aware !!
+
+    #define Double(x*x)
+    int num=5;
+    printf("%d", Double(++num));
+
+    //result = 49, since x of Double(x*x) will take two steps. 
+    //1st x= ++num 
+    //2nd x=++(++num)
+    //so, x become 7 before processing x*x  
+
+    #define Plus 2+5
+    printf("%d", Plus * 5);
+
+    //result = 27, since Plus * 5 is 2+5*5
+
+    #define Plus (2+5)
+    printf("%d", Plus * 5);
+
+    //result = 35, since Plus * 5 is (2+5)*5
+
+
+## Extern
+
+- In C++, Static are Const are internal linkage but Extern is external linkage
+
 
