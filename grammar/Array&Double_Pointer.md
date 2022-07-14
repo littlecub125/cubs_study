@@ -1,11 +1,11 @@
 # Array
-## Fixed Array
+### Fixed Array
 - <span style="color:yellow">data_type</span> <span style="color:red"> Array </span> <span style="color:green"> [index]</span> = {componet 1, componet 2, component 3, .....}
     - example
 
             int score[3]={1, 2, 3};
 
-## Dynamic Array
+### Dynamic Array
 - Depend on situation, length of array is changed
 
 - example
